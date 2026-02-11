@@ -1,0 +1,31 @@
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container h1 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+p.red {
+  color: red;
+}
+
+p.blue {
+  color: blue;
+}
+
+p.green {
+  color: green;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/*# sourceMappingURL=main.css.map */

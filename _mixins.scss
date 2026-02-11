@@ -1,0 +1,81 @@
+// _mixins.scss
+ 
+@use "colors" as *;
+
+
+// Conteneur centré en flex
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin title($size, $margin: 1rem 0, $color: $dark) {
+  font-size: $size;
+  margin: $margin;
+  color: $color;
+  font-weight: bold;
+}
+
+@mixin colored-text($color) {
+  color: $color;
+}
+
+@mixin colored-bg($color) {
+  background-color: $color;
+  color: white;
+  padding: 0.5rem;
+}
+
+@mixin footer-style($bg-color, $text-color: white) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 1rem;
+  text-align: center;
+}
+
+// Exemple de mixin pour article
+@mixin article-style($bg-color: #f6f6f6, 
+  $padding: 1rem) {
+  background-color: $bg-color;
+  padding: $padding;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+// boutons
+@mixin button($bg-color, $color: white) {
+  background-color: $bg-color;
+  color: $color;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+// cartes / boîtes
+@mixin card($shadow: 0 2px 10px rgba(0,0,0,0.1), $radius: 10px) {
+  box-shadow: $shadow;
+  border-radius: $radius;
+  padding: 1rem;
+  background-color: white;
+}
+
+// responsive simple
+@mixin responsive($max-width) {
+  @media (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}

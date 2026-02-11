@@ -1,0 +1,10 @@
+header {
+  @include flex-center;
+  background-color: $dark;
+  padding: 1rem;
+  color: $light;
+
+  nav {
+    @include nav;
+  }
+}

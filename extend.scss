@@ -1,0 +1,43 @@
+// _extend.scss
+
+@use "colors" as *;
+
+// Article / Card
+
+%card {
+  background-color: lighten($dark, 70%);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+
+  h2 {
+    @include subtitle;
+  }
+
+  p {
+    @include text;
+  }
+}
+
+// H1 / H2 Titles
+
+%heading {
+  font-weight: bold;
+  color: $dark;
+  margin: 1rem 0;
+}
+
+// Boutons
+
+%btn {
+  background: $primary;
+  color: $light;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

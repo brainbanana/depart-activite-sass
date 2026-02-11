@@ -1,0 +1,75 @@
+@import "colors";
+@import "mixins";
+@import "header";
+@import "nav";
+@import "footer";
+@import "extend";
+
+header nav {
+  @include flex-center;
+}
+
+.container {
+  @include container;
+
+  @include mobile {
+    padding: 0 0.5rem;
+  }
+}
+
+h1 {
+  @include title(2rem);
+
+  @include mobile {
+    font-size: 1.5rem;
+  }
+}
+
+h2 {
+  @include subtitle;
+
+  @include mobile {
+    font-size: 1.2rem;
+  }
+}
+
+p {
+  @include text;
+
+  @include mobile {
+    font-size: 0.9rem;
+  }
+}
+
+article {
+  @include article;
+
+  @include mobile {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.container h1 {
+  @include title(2rem);
+
+  @include mobile {
+    font: size 1.5rem;
+  }
+}
+
+p.red {
+  @include colored-text($primary);
+}
+
+p.blue {
+  @include colored-text($secondary);
+}
+
+p.green {
+  @include colored-text($tertiary);
+}
+
+footer {
+  @include footer-style($dark, $light);
+}
