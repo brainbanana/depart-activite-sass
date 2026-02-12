@@ -1,31 +1,105 @@
+/* Reset / Normalize */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* html et body prennent toute la hauteur */
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Body comme flex container vertical pour pousser le footer */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container principal qui occupe tout l'espace disponible */
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* pousse le footer vers le bas */
+}
+
+/* Header et Footer full-width malgré le container */
+header, footer {
+  width: 100vw; /* largeur totale de la fenêtre */
+  margin-left: calc(-50vw + 50%); /* recentre le full-width dans le body */
+  background-color: #000; /* noir */
+}
+
+/* Header : navigation centrée */
 header nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color:black; /* couleur du header */
+  padding: 1rem 0;
 }
 
-.container h1 {
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  gap: 2rem;
+  padding: 1rem 0; /* espace vertical dans le header */
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+}
+
+header nav ul li a:active {
+  color: deeppink; /* devient rose au clic seulement */
+}
+
+/* Main : texte centré */
+main {
+  flex: 1;
+  text-align: center;
+  padding: 2rem 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centre verticalement si peu de contenu */
+}
+
+/* Titres */
+main h1 {
   font-size: 2rem;
-  margin: 1rem 0;
+  margin: 1rem 0 2rem 0; /* top 1rem, bottom 2rem */
+  color:deeppink;
 }
 
-p.red {
-  color: red;
+main h2 {
+  font-size: 2rem;
+  margin: 1rem 0 2rem 0; /* top 1rem, bottom 2rem */
+  color:deeppink;
 }
 
-p.blue {
-  color: blue;
+main p {
+  margin: 1rem 0; /* espace vertical entre les paragraphes */
+  color:black;
 }
 
-p.green {
-  color: green;
-}
+/* Couleurs de paragraphes */
+p.red { color: red; }
+p.blue { color: blue; }
+p.green { color: green; }
 
+/* Footer */
 footer {
   background-color: #353535;
   color: white;
-  padding: 1rem;
+  padding: 1rem 0;
   text-align: center;
+  flex-shrink: 0; /* empêche le footer de rétrécir */
 }
+
 
 /*# sourceMappingURL=main.css.map */
