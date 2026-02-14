@@ -45,18 +45,19 @@ header nav ul {
   list-style: none;
   display: flex;
   justify-content: center; /* centre horizontalement */
-  gap: 2rem;
+  gap: 10rem;
   padding: 1rem 0; /* espace vertical dans le header */
 }
 
 header nav ul li a {
-  text-decoration: none;
   color:white;
+  text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
 header nav ul li a:active {
-  color: deeppink; /* devient rose au clic seulement */
+  color: deeppink;
 }
 
 /* Main : texte centré */
